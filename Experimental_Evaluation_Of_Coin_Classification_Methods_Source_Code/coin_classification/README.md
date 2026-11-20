@@ -117,23 +117,3 @@ cd ..
 ```
 
 Inspect the generated class selection and audit files before passing `--confirm-audit`. Each preparation requires a fresh output directory.
-
-## Cluster and transfer utilities
-
-For E3–E6, the included Slurm launchers are submitted from their respective campaign directory, after preparation. Create `logs/` before submission. The launchers use `COIN_ENV_ROOT` for the Singularity image (`coin_cuda126.sif`), Python environment (`container_venv/`) and cached weights (`pretrained_weights/`); it defaults to `$HOME/coin_finki`, the original runtime location. For example, from the Min30 campaign directory:
-
-```bash
-mkdir -p logs
-export COIN_ENV_ROOT="$HOME/coin_finki"
-sbatch train_imbalanced.slurm
-```
-
-For Min20, submit `train_min20.slurm` instead from its own directory. The cluster partition and GPU resource settings may require adjustment on another cluster.
-
-The root-level `package.py` transfers freshly prepared balanced data and its matching code:
-
-```bash
-python package.py --project coin_experiments_balanced --prepared experiments_28 --zip balanced_transfer.zip
-```
-
-Extract that archive into the parent directory of `coin_classification/`, then run `python relocate.py` from its project root before training. The relocation helper updates the prepared dataset path only and refuses to work after training has started.
