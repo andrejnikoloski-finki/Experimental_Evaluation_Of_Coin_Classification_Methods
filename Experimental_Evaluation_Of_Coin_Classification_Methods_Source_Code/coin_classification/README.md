@@ -5,7 +5,9 @@ Source code for the comparison of four coin classification methods on combined o
 # Authors
 
 Andrej Nikoloski
+
 Milena Trajkoska
+
 Biljana Risteska Stojkoska
 
 # Publication
