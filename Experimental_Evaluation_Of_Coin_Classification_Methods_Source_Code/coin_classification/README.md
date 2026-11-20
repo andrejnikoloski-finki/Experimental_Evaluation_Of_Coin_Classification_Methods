@@ -14,6 +14,16 @@ Biljana Risteska Stojkoska
 
 This repository contains the source code accompanying the paper Experimental Evaluation of Coin Classification Methods using Deep Learning Methods, accepted for presentation at TELFOR 2026.
 
+## Dataset
+
+All experiments use images from the Corpus Nummorum (CN)
+Coin Image Dataset, publicly available on Zenodo:
+
+https://doi.org/10.5281/zenodo.10033993
+
+The original coin images are not included in this repository and can be downloaded directly from the official dataset. 
+The provided preparation scripts construct the datasets used in all six experimental settings.
+
 ## Experimental settings
 
 | Source directory | Experiments | Coins | Original / merged classes |
