@@ -21,8 +21,9 @@ Coin Image Dataset, publicly available on Zenodo:
 
 https://doi.org/10.5281/zenodo.10033993
 
-The original coin images are not included in this repository and can be downloaded directly from the official dataset. 
-The provided preparation scripts construct the datasets used in all six experimental settings.
+The dataset_splits directory contains the exact coin IDs, image filenames, original and merged class labels, and fixed training, validation, and test assignments used in all six experimental settings.
+
+The original images can be downloaded from Zenodo.
 
 ## Experimental settings
 
